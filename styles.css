@@ -1,130 +1,159 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-:root{
-    --Main-bg-Color: linear-gradient(90deg, #000000, #010639);
-    --PrimaryColor: #9c9c9c;
-    --SecondaryColor: #449eff;
-    --main-text-color: #9c9c9c;
-    --header-height: 3rem;
+:root {
+  --Main-bg-Color: linear-gradient(90deg, #000000, #010639);
+  --PrimaryColor: #9c9c9c;
+  --SecondaryColor: #449eff;
+  --main-text-color: #9c9c9c;
+  --header-height: 3rem;
 }
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-html{
-    font-size: 62.5%;;
+html {
+  font-size: 62.5%;
+  ;
 }
 
-body{
-    font-size: 1.5rem;
-    font-family: "Open Sans", sans-serif;
-    background: var(--Main-bg-Color);
-    color: var(--main-text-color);
+body {
+  font-size: 1.5rem;
+  font-family: "Open Sans", sans-serif;
+  background: var(--Main-bg-Color);
+  color: var(--main-text-color);
 }
 
-header{
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    display: flex;
-    height: var(--header-height);
-    padding: 2rem 0rem 1rem 0rem;
-    justify-content: space-around;
+header {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: flex;
+  height: var(--header-height);
+  padding: 2rem 0rem 1rem 0rem;
+  justify-content: space-around;
 }
 
-nav ul{
-    display: flex;
-    list-style: none;
-    gap: 8rem;
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 8rem;
 }
 
-nav a{
-    text-decoration: none;
-    color: var(--main-text-color);
-    border-radius: 8rem;
-    cursor:pointer;   
-    border: 2px solid transparent;
-    padding: 1rem 1rem;
-    /* suaviza a mudança de background e borda */
-    transition: 
+nav a {
+  text-decoration: none;
+  color: var(--main-text-color);
+  border-radius: 8rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  padding: 1rem 1rem;
+  /* suaviza a mudança de background e borda */
+  transition:
     background-color 0.2s ease,
-    border-color      0.2s ease;
+    border-color 0.2s ease;
 }
 
-nav a:hover{
-    background-color: #010639;
-    border-color: #666;
+nav a:hover {
+  background-color: #010639;
+  border-color: #666;
 }
 
-.campoDeBusca{
-    font-size: 1.5rem;
-    justify-content: space-around;
-    padding: 5px 5px;
-    width: 70%;
-    border-radius: 10px;
-    border: 3px solid var(--main-text-color);
+.campoDeBusca {
+  font-size: 1.5rem;
+  justify-content: space-around;
+  padding: 5px 5px;
+  width: 70%;
+  border-radius: 10px;
+  border: 3px solid var(--main-text-color);
 }
 
-.busca{
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    width: 100%;
+.busca {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 /* Container que faz a borda degradê circular e animação */
 .efeitos_da_fotoPTK {
-    position: relative;
-    display: block;           /* block para suportar margin auto */
-    width: fit-content;       /* Encolhe ao tamanho do conteúdo */
-    margin-left: auto;        /* Empurra para a direita */
-    margin-right: 5%;         /* Distância fixa da borda direita */
-    margin-top: 3%;
-    padding: 5px;             /* largura da “borda” */
-    border-radius: 50%;       /* círculo perfeito */
-    overflow: hidden;         /* recorta o gradiente */
-    opacity: 0;
-    animation: slideFade 3s ease-out forwards;
-  }
-  
-  /* Pseudo-elemento com gradiente cônico que gira */
-  .efeitos_da_fotoPTK::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: conic-gradient(
-      #0c9ffa,
+  position: relative;
+  display: block;
+  /* block para suportar margin auto */
+  width: fit-content;
+  /* Encolhe ao tamanho do conteúdo */
+  margin-left: auto;
+  /* Empurra para a direita */
+  margin-right: 5%;
+  /* Distância fixa da borda direita */
+  margin-top: 3%;
+  padding: 5px;
+  /* largura da “borda” */
+  border-radius: 50%;
+  /* círculo perfeito */
+  overflow: hidden;
+  /* recorta o gradiente */
+  opacity: 0;
+  animation: slideFade 3s ease-out forwards;
+}
+
+/* Pseudo-elemento com gradiente cônico que gira */
+.efeitos_da_fotoPTK::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(#0c9ffa,
       #0a0abe,
       #0f0070,
-      #0c9ffa          /* volta à cor inicial para ciclo contínuo */
+      #0c9ffa
+      /* volta à cor inicial para ciclo contínuo */
     );
-    animation: rotate 4s linear infinite;
-    z-index: -1;            /* atrás da imagem */
+  animation: rotate 4s linear infinite;
+  z-index: -1;
+  /* atrás da imagem */
+}
+
+.fotoPatrick {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  /* mantém a imagem circular */
+  object-fit: cover;
+  /* preenche o círculo sem distorcer */
+}
+
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
   }
-  
-  .fotoPatrick {
-    display: block;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;     /* mantém a imagem circular */
-    object-fit: cover;      /* preenche o círculo sem distorcer */
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
-  @keyframes slideFade {
-    from {
-      opacity: 0;
-      transform: translateX(100%);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
   }
-  
-  @keyframes rotate {
-    to {
-      transform: rotate(360deg);
-    }
-  }
+}
+
+.sobre-mim {
+  max-width: 800px;
+  /* Largura máxima */
+  margin: 1rem auto;
+  /* Centraliza horizontalmente */
+  padding: 1rem;
+  /* Espaçamento interno */
+  font-size: 3rem;
+  /* Tamanho da fonte legível */
+  line-height: 1.6;
+  /* Altura de linha confortável */
+  color: #ffffff;
+  /* Cor do texto (ajuste se necessário) */
+  text-align: justify;
+  /* Justifica o texto */
+}
