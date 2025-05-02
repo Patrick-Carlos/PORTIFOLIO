@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 :root {
   --Main-bg-Color: linear-gradient(90deg, #000000, #010639);
   --PrimaryColor: #9c9c9c;
   --SecondaryColor: #449eff;
   --main-text-color: #9c9c9c;
+  --font-text: "Sour Gummy";
   --header-height: 3rem;
 }
 
@@ -30,8 +33,14 @@ header {
   white-space: nowrap;
   text-overflow: ellipsis;
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 0px solid var(--main-text-color);
+  box-shadow: 0px 1px 5px var(--main-text-color);
   height: var(--header-height);
-  padding: 2rem 0rem 1rem 0rem;
+  padding: 2rem 0rem 2rem 0rem;
   justify-content: space-around;
 }
 
@@ -44,6 +53,7 @@ nav ul {
 nav a {
   text-decoration: none;
   color: var(--main-text-color);
+  font-size: 2rem;
   border-radius: 8rem;
   cursor: pointer;
   border: 2px solid transparent;
@@ -60,8 +70,9 @@ nav a:hover {
 }
 
 .campoDeBusca {
-  font-size: 1.5rem;
+  font-size: 2rem;
   justify-content: space-around;
+  margin: 4rem;
   padding: 5px 5px;
   width: 70%;
   border-radius: 10px;
@@ -71,12 +82,14 @@ nav a:hover {
 .busca {
   justify-content: center;
   display: flex;
+  margin-top: 6rem;
   align-items: center;
   width: 100%;
 }
 
 /* Container que faz a borda degradê circular e animação */
 .efeitos_da_fotoPTK {
+
   position: relative;
   display: block;
   /* block para suportar margin auto */
@@ -84,7 +97,7 @@ nav a:hover {
   /* Encolhe ao tamanho do conteúdo */
   margin-left: auto;
   /* Empurra para a direita */
-  margin-right: 5%;
+  margin-right: 10%;
   /* Distância fixa da borda direita */
   margin-top: 3%;
   padding: 5px;
@@ -115,8 +128,8 @@ nav a:hover {
 
 .fotoPatrick {
   display: block;
-  width: 200px;
-  height: 200px;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
   /* mantém a imagem circular */
   object-fit: cover;
@@ -141,19 +154,43 @@ nav a:hover {
   }
 }
 
+.titulo_sobremim {
+  font-size: 5rem;
+}
+
+.texto_sobremim {
+  font-family: var(--font-text);
+  animation: slideFadeLeft 3s ease-out forwards;
+}
+
 .sobre-mim {
+  flex: 1;
+  min-width: 300px;
   max-width: 800px;
-  /* Largura máxima */
-  margin: 1rem auto;
-  /* Centraliza horizontalmente */
-  padding: 1rem;
-  /* Espaçamento interno */
-  font-size: 3rem;
-  /* Tamanho da fonte legível */
-  line-height: 1.6;
-  /* Altura de linha confortável */
+  padding: 0;
+  font-size: 2.5rem;
+  line-height: 1.3;
+  margin-left: 20rem;
   color: #ffffff;
-  /* Cor do texto (ajuste se necessário) */
   text-align: justify;
-  /* Justifica o texto */
+  animation: slideFadeLeft 3s ease-out forwards;
+}
+
+@keyframes slideFadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.conteudo_sobremim {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
