@@ -100,12 +100,12 @@ nav a:hover {
   margin-right: 10%;
   /* Distância fixa da borda direita */
   margin-top: 3%;
-  padding: 5px;
+  padding: 10px;
   /* largura da “borda” */
   border-radius: 50%;
   /* círculo perfeito */
   overflow: hidden;
-  /* recorta o gradiente */
+  /* recorta o gradiente. Se não fica o quadrado da div girando */
   opacity: 0;
   animation: slideFade 3s ease-out forwards;
 }
