@@ -194,3 +194,18 @@ nav a:hover {
   align-items: center;
   flex-wrap: wrap;
 }
+
+.titulo_experiencia {
+  color: #ffffff;
+  grid-column: 1 / -1; /* ocupa todas as colunas */
+  text-align: center;
+  font-size: 5rem;
+  margin: 0;
+  padding: 0;
+}
+.conteudo_experiencia {
+  display:grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 2rem;
+  text-align: justify;
+  }
