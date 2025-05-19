@@ -8,11 +8,8 @@
   --SecondaryColor: #449eff;
   --main-text-color: #9c9c9c;
   --font-text: "Sour Gummy";
-<<<<<<< HEAD
   --header-height: 1rem;
-=======
   --header-height: 3rem;
->>>>>>> 340515e7ef92cefc91622b5c530807dd0d41beef
 }
 
 * {
@@ -26,11 +23,8 @@ html {
 }
 
 body {
-<<<<<<< HEAD
   font-size: 1rem;
-=======
   font-size: 1.5rem;
->>>>>>> 340515e7ef92cefc91622b5c530807dd0d41beef
   font-family: "Open Sans", sans-serif;
   background: var(--Main-bg-Color);
   color: var(--main-text-color);
@@ -63,11 +57,8 @@ nav ul {
 nav a {
   text-decoration: none;
   color: var(--main-text-color);
-<<<<<<< HEAD
   font-size: 1rem;
-=======
   font-size: 2rem;
->>>>>>> 340515e7ef92cefc91622b5c530807dd0d41beef
   border-radius: 8rem;
   cursor: pointer;
   border: 2px solid transparent;
@@ -84,15 +75,12 @@ nav a:hover {
 }
 
 .campoDeBusca {
-<<<<<<< HEAD
   font-size: 1rem;
   justify-content: space-around;
   margin: 1rem;
-=======
   font-size: 2rem;
   justify-content: space-around;
   margin: 4rem;
->>>>>>> 340515e7ef92cefc91622b5c530807dd0d41beef
   padding: 5px 5px;
   width: 70%;
   border-radius: 10px;
@@ -117,11 +105,8 @@ nav a:hover {
   /* Encolhe ao tamanho do conteúdo */
   margin-left: auto;
   /* Empurra para a direita */
-<<<<<<< HEAD
   margin-right: 2%;
-=======
   margin-right: 10%;
->>>>>>> 340515e7ef92cefc91622b5c530807dd0d41beef
   /* Distância fixa da borda direita */
   margin-top: 3%;
   padding: 10px;
@@ -152,21 +137,18 @@ nav a:hover {
 
 .fotoPatrick {
   display: block;
-<<<<<<< HEAD
   width: 40rem;
   height: 40rem;
   /* mantém a imagem circular */
   border-radius: 50%;
   /* preenche o círculo sem distorcer */
   object-fit: cover;
-=======
   width: 500px;
   height: 500px;
   border-radius: 50%;
   /* mantém a imagem circular */
   object-fit: cover;
   /* preenche o círculo sem distorcer */
->>>>>>> 340515e7ef92cefc91622b5c530807dd0d41beef
 }
 
 @keyframes slideFade {
@@ -188,11 +170,8 @@ nav a:hover {
 }
 
 .titulo_sobremim {
-<<<<<<< HEAD
   font-size: 3rem;
-=======
   font-size: 5rem;
->>>>>>> 340515e7ef92cefc91622b5c530807dd0d41beef
 }
 
 .texto_sobremim {
@@ -202,21 +181,18 @@ nav a:hover {
 
 .sobre-mim {
   flex: 1;
-<<<<<<< HEAD
   min-width: 1rem;
   max-width: 55rem;
   padding: 0;
   font-size: 2rem;
   line-height: 1.3;
   margin-left: 1.5rem;
-=======
   min-width: 300px;
   max-width: 800px;
   padding: 0;
   font-size: 2.5rem;
   line-height: 1.3;
   margin-left: 20rem;
->>>>>>> 340515e7ef92cefc91622b5c530807dd0d41beef
   color: #ffffff;
   text-align: justify;
   animation: slideFadeLeft 3s ease-out forwards;
@@ -254,7 +230,6 @@ nav a:hover {
   grid-template-columns: 2fr 2fr;
   gap: 2rem;
   text-align: justify;
-<<<<<<< HEAD
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   }
@@ -282,6 +257,3 @@ nav a:hover {
   margin: 0;
   padding: 0;
 }
-=======
-  }
->>>>>>> 340515e7ef92cefc91622b5c530807dd0d41beef
