@@ -1,130 +1,239 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root{
-    --Main-bg-Color: linear-gradient(90deg, #000000, #010639);
-    --PrimaryColor: #9c9c9c;
-    --SecondaryColor: #449eff;
-    --main-text-color: #9c9c9c;
-    --header-height: 3rem;
+
+:root {
+  --Main-bg-Color: linear-gradient(90deg, #000000, #010639);
+  --PrimaryColor: #9c9c9c;
+  --SecondaryColor: #449eff;
+  --main-text-color: #9c9c9c;
+  --font-text: "Sour Gummy";
+  --header-height: 1rem;
 }
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-html{
-    font-size: 62.5%;;
+html {
+  font-size: 62.5%;
+  ;
 }
 
-body{
-    font-size: 1.5rem;
-    font-family: "Open Sans", sans-serif;
-    background: var(--Main-bg-Color);
-    color: var(--main-text-color);
+body {
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  background: var(--Main-bg-Color);
+  color: var(--main-text-color);
 }
 
-header{
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    display: flex;
-    height: var(--header-height);
-    padding: 2rem 0rem 1rem 0rem;
-    justify-content: space-around;
+header {
+  background: var(--Main-bg-Color);
+  z-index: 10;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 0px solid var(--main-text-color);
+  box-shadow: 0px 1px 5px var(--main-text-color);
+  height: var(--header-height);
+  padding: 2rem 0rem 2rem 0rem;
+  justify-content: space-around;
 }
 
-nav ul{
-    display: flex;
-    list-style: none;
-    gap: 8rem;
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 8rem;
 }
 
-nav a{
-    text-decoration: none;
-    color: var(--main-text-color);
-    border-radius: 8rem;
-    cursor:pointer;   
-    border: 2px solid transparent;
-    padding: 1rem 1rem;
-    /* suaviza a mudança de background e borda */
-    transition: 
+nav a {
+  text-decoration: none;
+  color: var(--main-text-color);
+  font-size: 1rem;
+  border-radius: 8rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  padding: 1rem 1rem;
+  /* suaviza a mudança de background e borda */
+  transition:
     background-color 0.2s ease,
-    border-color      0.2s ease;
+    border-color 0.2s ease;
 }
 
-nav a:hover{
-    background-color: #010639;
-    border-color: #666;
+nav a:hover {
+  background-color: #010639;
+  border-color: #666;
 }
 
-.campoDeBusca{
-    font-size: 1.5rem;
-    justify-content: space-around;
-    padding: 5px 5px;
-    width: 70%;
-    border-radius: 10px;
-    border: 3px solid var(--main-text-color);
+.campoDeBusca {
+  font-size: 1rem;
+  justify-content: space-around;
+  margin: 1rem;
+  padding: 5px 5px;
+  width: 70%;
+  border-radius: 10px;
+  border: 3px solid var(--main-text-color);
 }
 
-.busca{
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    width: 100%;
+.busca {
+  justify-content: center;
+  display: flex;
+  margin-top: 6rem;
+  align-items: center;
+  width: 100%;
 }
 
 /* Container que faz a borda degradê circular e animação */
 .efeitos_da_fotoPTK {
-    position: relative;
-    display: block;           /* block para suportar margin auto */
-    width: fit-content;       /* Encolhe ao tamanho do conteúdo */
-    margin-left: auto;        /* Empurra para a direita */
-    margin-right: 5%;         /* Distância fixa da borda direita */
-    margin-top: 3%;
-    padding: 5px;             /* largura da “borda” */
-    border-radius: 50%;       /* círculo perfeito */
-    overflow: hidden;         /* recorta o gradiente */
-    opacity: 0;
-    animation: slideFade 3s ease-out forwards;
-  }
-  
-  /* Pseudo-elemento com gradiente cônico que gira */
-  .efeitos_da_fotoPTK::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: conic-gradient(
-      #0c9ffa,
+
+  position: relative;
+  display: block;
+  /* block para suportar margin auto */
+  width: fit-content;
+  /* Encolhe ao tamanho do conteúdo */
+  margin-left: auto;
+  /* Empurra para a direita */
+  margin-right: 2%;
+  /* Distância fixa da borda direita */
+  margin-top: 3%;
+  padding: 10px;
+  /* largura da “borda” */
+  border-radius: 50%;
+  /* círculo perfeito */
+  overflow: hidden;
+  /* recorta o gradiente. Se não fica o quadrado da div girando */
+  opacity: 0;
+  animation: slideFade 3s ease-out forwards;
+}
+
+/* Pseudo-elemento com gradiente cônico que gira */
+.efeitos_da_fotoPTK::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(#0c9ffa,
       #0a0abe,
       #0f0070,
-      #0c9ffa          /* volta à cor inicial para ciclo contínuo */
+      #0c9ffa
+      /* volta à cor inicial para ciclo contínuo */
     );
-    animation: rotate 4s linear infinite;
-    z-index: -1;            /* atrás da imagem */
+  animation: rotate 4s linear infinite;
+  z-index: -1;
+  /* atrás da imagem */
+}
+
+.fotoPatrick {
+  display: block;
+  width: 40rem;
+  height: 40rem;
+  /* mantém a imagem circular */
+  border-radius: 50%;
+  /* preenche o círculo sem distorcer */
+  object-fit: cover;
+}
+
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
   }
-  
-  .fotoPatrick {
-    display: block;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;     /* mantém a imagem circular */
-    object-fit: cover;      /* preenche o círculo sem distorcer */
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
-  @keyframes slideFade {
-    from {
-      opacity: 0;
-      transform: translateX(100%);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
   }
-  
-  @keyframes rotate {
-    to {
-      transform: rotate(360deg);
-    }
+}
+
+.titulo_sobremim {
+  font-size: 3rem;
+}
+
+.texto_sobremim {
+  font-family: var(--font-text);
+  animation: slideFadeLeft 3s ease-out forwards;
+}
+
+.sobre-mim {
+  flex: 1;
+  min-width: 1rem;
+  max-width: 55rem;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 1.3;
+  margin-left: 1.5rem;
+  color: #ffffff;
+  text-align: justify;
+  animation: slideFadeLeft 3s ease-out forwards;
+}
+
+@keyframes slideFadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
   }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.conteudo_sobremim {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.titulo_experiencia {
+  color: #ffffff;
+  grid-column: 1 / -1; /* ocupa todas as colunas */
+  text-align: center;
+  font-size: 5rem;
+  margin: 0;
+  padding: 0;
+}
+.conteudo_experiencia {
+  display:grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 2rem;
+  text-align: justify;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  }
+
+  .empresa_experiencia {
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+.empresa_experiencia a {
+  color: #ffffff;
+  text-decoration: none; /* opcional: remove o sublinhado */
+}
+
+.empresa_experiencia:hover {
+  text-decoration: underline; /* adiciona sublinhado no hover */
+}
+
+.texto_experiencia {
+  font-size: 1.2rem;
+  color: var(--main-text-color);
+  margin: 0;
+  padding: 0;
+}
