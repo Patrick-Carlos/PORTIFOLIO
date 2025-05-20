@@ -237,3 +237,31 @@ nav a:hover {
   margin: 0;
   padding: 0;
 }
+
+.titulo_certificados{
+  color: #ffffff;
+  grid-column: 1 / -1; /* ocupa todas as colunas */
+  text-align: center;
+  font-size: 5rem;
+  margin: 0;
+  padding: 0;
+
+}
+
+.conteudo_certificado{
+  display: grid;
+  margin-top: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.certs img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.certs img:hover {
+    transform: scale(1.05);
+}
